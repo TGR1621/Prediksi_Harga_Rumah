@@ -4,12 +4,14 @@ import locale
 import numpy as np
 import pandas as pd
 
-# Load models and dataset
-with open('linreg_model.pkl', 'rb') as f:
-    linreg_model = pickle.load(f)
+try:
+    with open('linreg_model.pkl', 'rb') as f:
+        linreg_model = pickle.load(f)
 
-with open('rf_model.pkl', 'rb') as f:
-    rf_model = pickle.load(f)
+    with open('rf_model.pkl', 'rb') as f:
+        rf_model = pickle.load(f)
+except Exception as e:
+    print("Error loading models:", e)
 
 dataset = pd.read_csv('DATA RUMAH.csv', sep=';')
 dataset = dataset.rename(columns={'NAMA RUMAH': 'NAMA_RUMAH'})
