@@ -36,10 +36,6 @@ def main():
 
         # Get predictions for each model
 
-        # Convert predictions to currency format
-        linreg_prediction_str = currency_format(linreg_prediction, grouping=True)
-        rf_prediction_str = currency_format(rf_prediction, grouping=True)
-
         # Get recommended houses
         rekomendasi = get_rekomendasi(linreg_prediction_str, rf_prediction_str, num_samples=5)
 
