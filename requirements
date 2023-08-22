@@ -16,3 +16,4 @@ sklearn==0.0
 SQLAlchemy==1.4.31
 threadpoolctl==3.1.0
 Werkzeug==2.0.2
+streamlit==1.24.1
