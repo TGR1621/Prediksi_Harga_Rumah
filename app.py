@@ -35,8 +35,6 @@ def main():
         input_data = [[lb, lt, kt, km, GRS]]
 
         # Get predictions for each model
-        linreg_prediction = linreg_model.predict(input_data)[0]
-        rf_prediction = rf_model.predict(input_data)[0]
 
         # Convert predictions to currency format
         linreg_prediction_str = currency_format(linreg_prediction, grouping=True)
