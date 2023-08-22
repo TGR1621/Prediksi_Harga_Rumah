@@ -1,6 +1,6 @@
 import streamlit as st
 import pickle
-import locale
+import os
 import numpy as np
 import pandas as pd
 
@@ -17,9 +17,8 @@ dataset = pd.read_csv('DATA RUMAH.csv', sep=';')
 dataset = dataset.rename(columns={'NAMA RUMAH': 'NAMA_RUMAH'})
 dataset = dataset.drop(columns='NO')
 
-# Set locale and currency format
-locale.setlocale(locale.LC_ALL, 'id_ID')
-currency_format = locale.currency
+os.environ['LC_ALL'] = 'en_US.UTF-8'  # Replace with the appropriate locale
+locale.setlocale(locale.LC_ALL, '')
 
 # Define functions as before...
 
