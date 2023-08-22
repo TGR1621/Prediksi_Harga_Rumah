@@ -18,8 +18,6 @@ dataset = pd.read_csv('DATA RUMAH.csv', sep=';')
 dataset = dataset.rename(columns={'NAMA RUMAH': 'NAMA_RUMAH'})
 dataset = dataset.drop(columns='NO')
 
-os.environ['LC_ALL'] = 'en_US.UTF-8'  # Replace with the appropriate locale
-locale.setlocale(locale.LC_ALL, '')
 
 # Define functions as before...
 
